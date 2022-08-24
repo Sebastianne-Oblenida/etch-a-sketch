@@ -1,0 +1,152 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    color: hsl(210, 17%, 98%);
+    font-weight: bold;
+    height: 100vh;
+    background-color: hsl(276, 100%, 15%);
+    font-size: 15px;
+}
+
+body, body>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    font-size: 50px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 310px;
+    height: 310px;
+    background-color: hsl(0, 0%, 100%);
+}
+
+body > div + div {
+    height: 130px;
+    width: 310px;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column wrap;
+}
+
+.row, .box {
+    flex-grow: 1;
+}
+
+.row {
+    display: flex;
+}
+
+.box {
+    background-color: hsl(210, 17%, 98%);
+}
+
+#slider {
+    margin: 15px;
+    -webkit-appearance: none;
+    width: 180px;
+    background: hsl(210, 17%, 98%);
+    opacity: 0.7;
+}
+
+#slider:hover {
+    opacity: 1;
+}
+
+#slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: hsl(0, 0%, 20%);
+    cursor: pointer;
+}
+
+button {
+    border: 1px solid hsl(0, 0%, 15%);
+    height: 35px;
+    width: 90px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+button:hover{
+    opacity: 0.9;
+}
+
+#chooseColor {
+    background-color: transparent;
+    border: none;
+    height: 80px;
+    width: 80px;
+    transition: 0.2s all;
+}
+
+#chooseColor::-webkit-color-swatch {
+    border-radius: 50%;
+    border-color: hsl(210, 17%, 98%);
+}
+
+#chooseColor:hover {
+    transform: translateY(-3px);
+}
+
+.activateMode {
+    background-color: hsl(134, 61%, 41%);
+    color: hsl(210, 17%, 98%);
+}
+
+#pencil,
+#eraser {
+    margin-top: 50px;
+}
+
+
+@media (min-width:650px) {
+    .container {
+        width: 400px;
+        height: 400px;
+    }
+}
+
+@media (min-width: 850px) {
+    body {
+        flex-direction: row-reverse;
+    }
+
+    .container {
+        width: 450px;
+        height: 450px;
+    }
+
+    body > div:nth-of-type(2) {
+        height: 450px;
+        width: 250px;
+        gap: 25px;
+        justify-content: flex-start;
+        padding-top: 55px;
+    }
+    #pencil, #eraser{
+        margin: 0;
+    }
+
+    button {
+        width: 130px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 500px;
+        height: 500px;
+    }
+}
