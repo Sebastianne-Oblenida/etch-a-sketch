@@ -46,7 +46,7 @@ body > div + div {
 }
 
 .box {
-    background-color: hsl(210, 17%, 98%);
+    background-color: hsl(0, 0%, 100%);
 }
 
 #slider {
